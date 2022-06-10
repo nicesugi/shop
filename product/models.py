@@ -41,7 +41,7 @@ class OrderStatus(models.Model):
         (ARRIVE, 'Arrive'),
     )
     status = models.CharField(max_length=4, choices=ORDER_STATUS)
-    product = models.ForeignKey(Product, related_name='orders')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
 
 
